@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "angular2": "^2.0.0-alpha.18"
   },
   "devDependencies": {
+    "angular2": "^2.0.0-alpha.18",
+    "es6-shim": "^0.27.1",
     "gulp": "^3.8.11"
   },
   "scripts": {
