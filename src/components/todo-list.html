@@ -1,11 +1,19 @@
 <ul class="collection">
   <li *for="#todo of todos"
       class="collection-item">
-    {{todo.text}}
-    <a href="#!" 
-       class="secondary-content"
-       (^click)="removeTodo(todo)">
-      <i class="mdi-action-highlight-remove"></i>
-    </a>
+    <form>
+      <p>
+        <a href="#!" 
+           class="secondary-content"
+           (^click)="removeTodo(todo)">
+          <i class="mdi-action-highlight-remove"></i>
+        </a>
+        <input type="checkbox"
+               [id]="todo.id"
+               [checked]="todo.isComplete"
+               (click)="completeTodo(todo)"/>
+        <label [html-for]="todo.id">{{todo.text}}</label>
+      </p>
+    </form>
   </li>
 </ul>

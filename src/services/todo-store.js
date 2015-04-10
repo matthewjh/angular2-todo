@@ -11,6 +11,7 @@ export class TodoStore {
 
   addTodo(todo) {
     todo.id = this._nextTodoId;
+    todo.isComplete = false;
     this.todos.push(todo);
 
     this._nextTodoId++;

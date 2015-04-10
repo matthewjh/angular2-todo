@@ -22,4 +22,8 @@ export class TodoListComponent {
   removeTodo(todo) {
     this._todoStore.removeTodo(todo);
   }
+
+  completeTodo(todo) {
+    todo.isComplete = true;
+  }
 }
