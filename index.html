@@ -1,6 +1,21 @@
 <html>
 	<head>
+		<script src="node_modules/traceur/bin/traceur.js"></script>
+		<script src="node_modules/es6-module-loader/dist/es6-module-loader-sans-promises.js"></script>
+		<script src="node_modules/systemjs/dist/system.js"></script>
 	</head>
 	<body>
+		<script>
+			System.traceurOptions = {
+			  annotations: true,
+			  memberVariables: true,
+			};
+
+			System.paths = {
+		    'app': 'src/app.es6'
+		  };
+
+			System.import('app');
+		</script>
 	</body>
 </html>

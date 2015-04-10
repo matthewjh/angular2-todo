@@ -9,8 +9,9 @@
     "es6-module-loader": "^0.16.5",
     "es6-shim": "^0.27.1",
     "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
     "systemjs": "^0.16.7",
-    "traceur": "0.0.88"
+    "traceur": "0.0.87"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
