@@ -1,28 +1,28 @@
 <html>
-	<head>
-		<script src="node_modules/traceur/bin/traceur.js"></script>
-		<script src="node_modules/es6-module-loader/dist/es6-module-loader-sans-promises.js"></script>
-		<script src="node_modules/systemjs/dist/system.js"></script>
-	</head>
-	<body>
-		<script>
-			System.traceurOptions = {
-				annotations: true,
-				memberVariables: true,
-				typeAssertions: true,
-				typeAssertionModule: 'node_modules/rtts_assert/rtts_assert',
-				types: true
-			};
-			
+  <head>
+    <script src="node_modules/traceur/bin/traceur.js"></script>
+    <script src="node_modules/es6-module-loader/dist/es6-module-loader-sans-promises.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
+  </head>
+  <body>
+    <script>
+      System.traceurOptions = {
+        annotations: true,
+        memberVariables: true,
+        typeAssertions: true,
+        typeAssertionModule: 'node_modules/rtts_assert/rtts_assert',
+        types: true
+      };
+      
 
-			System.paths = {
-				'app': 'src/app.js',
-				'angular2/*': 'node_modules/angular2/es6/dev/*.es6',
-				'rtts_assert/*': 'node_modules/rtts_assert/es6/src/*.es6',
-				'rx/*': 'node_modules/rx/*.js',
-			};
+      System.paths = {
+        'app': 'src/app.js',
+        'angular2/*': 'node_modules/angular2/es6/dev/*.es6',
+        'rtts_assert/*': 'node_modules/rtts_assert/es6/src/*.es6',
+        'rx/*': 'node_modules/rx/*.js',
+      };
 
-			System.import('app');
-		</script>
-	</body>
+      System.import('app');
+    </script>
+  </body>
 </html>
