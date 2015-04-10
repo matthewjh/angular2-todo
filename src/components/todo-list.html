@@ -1,0 +1,11 @@
+<ul class="collection">
+  <li *for="#todo of todos"
+      class="collection-item">
+    {{todo.text}}
+    <a href="#!" 
+       class="secondary-content"
+       (^click)="removeTodo(todo)">
+      <i class="mdi-action-highlight-remove"></i>
+    </a>
+  </li>
+</ul>

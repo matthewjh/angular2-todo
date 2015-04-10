@@ -1,13 +1,14 @@
 import {Component, Template} from 'angular2/angular2';
-import {TimeComponent} from 'components/time';
 import {TodoEntryComponent} from 'components/todo-entry';
+import {TodoListComponent} from 'components/todo-list';
+import {TodoStore} from 'services/todo-store';
 
 @Component({
-  selector: 'todo-app'
+  selector: 'todo-app',
+  services: [TodoStore]
 })
 @Template({
   url: 'src/components/todo-app.html',
-  directives: [TimeComponent, TodoEntryComponent]
+  directives: [TodoEntryComponent, TodoListComponent]
 })
-export class TodoAppComponent {
-}
+export class TodoAppComponent {}
