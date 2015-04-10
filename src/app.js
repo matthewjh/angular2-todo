@@ -1,3 +1,4 @@
 import {bootstrap} from 'angular2/angular2';
+import {TodoAppComponent} from 'components/todo-app';
 
-console.log(bootstrap);
+bootstrap(TodoAppComponent);

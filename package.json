@@ -13,7 +13,8 @@
     "rtts_assert": "^2.0.0-alpha.18",
     "rx": "^2.5.1",
     "systemjs": "^0.16.7",
-    "traceur": "0.0.87"
+    "traceur": "0.0.87",
+    "zone.js": "^0.4.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
