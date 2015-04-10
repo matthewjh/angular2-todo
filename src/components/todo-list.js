@@ -1,6 +1,6 @@
 import {For, Component, Template} from 'angular2/angular2';
 import {Inject} from 'angular2/di';
-import {TodoStore} from 'services/todo-store';
+import {TodoStore} from 'src/services/todo-store';
 
 @Component({
   selector: 'todo-list'
@@ -10,7 +10,7 @@ import {TodoStore} from 'services/todo-store';
   directives: [For]
 })
 export class TodoListComponent {
-  constructor(@Inject(TodoStore) todoStore) {
+  constructor(todoStore: TodoStore) {
     this._todoStore = todoStore;
     this.todos = todoStore.todos;
   }
