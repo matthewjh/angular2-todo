@@ -1,17 +1,22 @@
 import {Component, Template} from 'angular2/angular2';
+import {Inject} from 'angular2/di';
+import {Time} from 'services/time';
 
 @Component({
-  selector: 'time'
+  selector: 'time',
+  services: [
+    Time
+  ]
 })
 @Template({
   inline: '<div>{{ time }}</div>'
 })
 export class TimeComponent {
-  constructor() {
-    this.time = new Date();
+  constructor(@Inject(Time) time) {
+    this.time = time.toString();
 
     setInterval(() => {
-      this.time = new Date();
+      this.time = time.toString();
     }, 100);
   }
 }
