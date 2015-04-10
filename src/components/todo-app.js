@@ -5,10 +5,8 @@ import {TimeComponent} from 'components/time';
   selector: 'todo-app'
 })
 @Template({
-  inline: '<b><time></time>Todo App! <button (click)="" ></button></b>',
+  inline: '<b><time></time>Todo App!</b>',
   directives: [TimeComponent]
 })
 export class TodoAppComponent {
-  construct() {
-  }
 }
