@@ -1,4 +1,7 @@
 export class TodoStore {
+  todos: Array;
+  _nextTodoId: number;
+
   constructor() {
     this.todos = [];
     this._nextTodoId = 0;

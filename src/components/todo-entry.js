@@ -8,6 +8,8 @@ import {TodoStore} from 'src/services/todo-store';
   url: 'src/components/todo-entry.html'
 })
 export class TodoEntryComponent {
+  _todoStore: TodoStore;
+
   constructor(todoStore: TodoStore) {
     this._todoStore = todoStore;
   }

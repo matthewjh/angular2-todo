@@ -10,6 +10,9 @@ import {TodoStore} from 'src/services/todo-store';
   directives: [For]
 })
 export class TodoListComponent {
+  todos: Array;
+  _todoStore: TodoStore;
+
   constructor(todoStore: TodoStore) {
     this._todoStore = todoStore;
     this.todos = todoStore.todos;
