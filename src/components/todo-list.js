@@ -1,4 +1,5 @@
 import {For, Component, Template} from 'angular2/angular2';
+import {List} from 'angular2/src/facade/collection';
 import {Inject} from 'angular2/di';
 import {TodoStore} from 'src/services/todo-store';
 
@@ -10,7 +11,7 @@ import {TodoStore} from 'src/services/todo-store';
   directives: [For]
 })
 export class TodoListComponent {
-  todos: Array;
+  todos: List;
   _todoStore: TodoStore;
 
   constructor(todoStore: TodoStore) {

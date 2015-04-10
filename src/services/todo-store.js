@@ -1,9 +1,11 @@
+import {List, ListWrapper} from 'angular2/src/facade/collection';
+
 export class TodoStore {
-  todos: Array;
+  todos: List;
   _nextTodoId: number;
 
   constructor() {
-    this.todos = [];
+    this.todos = ListWrapper.create();
     this._nextTodoId = 0;
   }
 
@@ -15,9 +17,6 @@ export class TodoStore {
   }
 
   removeTodo(todoToRemove) {
-    console.log('here');
-    var index = this.todos.findIndex((todo) => todo.id === todoToRemove.id);
-
-    this.todos.splice(index, 1);
+    ListWrapper.remove(this.todos, todoToRemove);
   }
 }
