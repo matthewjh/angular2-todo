@@ -4,9 +4,7 @@ import {Time} from 'services/time';
 
 @Component({
   selector: 'time',
-  services: [
-    Time
-  ]
+  services: [Time]
 })
 @Template({
   url: 'src/components/time.html'
