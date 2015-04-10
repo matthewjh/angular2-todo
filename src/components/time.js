@@ -9,7 +9,7 @@ import {Time} from 'services/time';
   ]
 })
 @Template({
-  inline: '<div>{{ time }}</div>'
+  url: 'src/components/time.html'
 })
 export class TimeComponent {
   constructor(@Inject(Time) time) {

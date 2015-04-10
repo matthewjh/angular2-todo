@@ -5,7 +5,7 @@ import {TimeComponent} from 'components/time';
   selector: 'todo-app'
 })
 @Template({
-  inline: '<b><time></time>Todo App!</b>',
+  url: 'src/components/todo-app.html',
   directives: [TimeComponent]
 })
 export class TodoAppComponent {
