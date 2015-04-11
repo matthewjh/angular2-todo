@@ -34,7 +34,7 @@ export class TodoStore {
     this._setCachedTodos();
   }
 
-  _getNextTodoId() {
+  _getNextTodoId(): number {
     var lastTodo = ListWrapper.last(this.todos);
 
     if (lastTodo) {
