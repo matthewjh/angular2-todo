@@ -2,19 +2,15 @@ import {List, ListWrapper} from 'angular2/src/facade/collection';
 
 export class TodoStore {
   todos: List;
-  _nextTodoId: number;
 
   constructor() {
     this.todos = this._getCachedTodos() || ListWrapper.create();
-    this._nextTodoId = 0;
   }
 
   addTodo(todo) {
-    todo.id = this._nextTodoId;
+    todo.id = this._getNextTodoId();
     todo.isComplete = false;
     this.todos.push(todo);
-
-    this._nextTodoId++;
 
     this._setCachedTodos();
   }
@@ -32,10 +28,20 @@ export class TodoStore {
   }
 
   clearCompletedTodos() {
-    // TODO(matthewjh): this shouldn't reassign this.todos
+    // TODO(matthewjh): we shouldn't reassign this.todos here, but this is an easy one-liner.
     this.todos = ListWrapper.filter(this.todos, (todo) => !todo.isComplete);
 
     this._setCachedTodos();
+  }
+
+  _getNextTodoId() {
+    var lastTodo = ListWrapper.last(this.todos);
+
+    if (lastTodo) {
+      return lastTodo.id + 1;
+    } else {
+      return 0;
+    }
   }
 
   _getCachedTodos(): List {
