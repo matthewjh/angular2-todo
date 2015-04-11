@@ -24,6 +24,6 @@ export class TodoListComponent {
   }
 
   completeTodo(todo) {
-    todo.isComplete = true;
+    this._todoStore.toggleTodo(todo);
   }
 }
