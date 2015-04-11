@@ -1,6 +1,5 @@
 import {For, Component, Template} from 'angular2/angular2';
 import {List} from 'angular2/src/facade/collection';
-import {Inject} from 'angular2/di';
 import {TodoStore} from 'src/services/todo-store';
 
 @Component({
@@ -25,5 +24,10 @@ export class TodoListComponent {
 
   completeTodo(todo) {
     this._todoStore.toggleTodo(todo);
+  }
+
+  clearCompletedTodos() {
+    this._todoStore.clearCompletedTodos();
+    this.todos = this._todoStore.todos;
   }
 }

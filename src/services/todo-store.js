@@ -31,6 +31,13 @@ export class TodoStore {
     this._setCachedTodos();
   }
 
+  clearCompletedTodos() {
+    // TODO(matthewjh): this shouldn't reassign this.todos
+    this.todos = ListWrapper.filter(this.todos, (todo) => !todo.isComplete);
+
+    this._setCachedTodos();
+  }
+
   _getCachedTodos(): List {
     return JSON.parse(localStorage.getItem('todos'));
   }
